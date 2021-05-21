@@ -21,7 +21,7 @@ def currentweather(lat,lon):
 
 
     # Build query URL
-    query_url = f"{url}lat={lat}&lon={lon}&units={units}&appid={api_key}"
+    query_url = f"{url}lat={lat}&lon={lon}&units={units}&appid={wx_key}"
 
     # Get weather data
     weather_response = requests.get(query_url)
