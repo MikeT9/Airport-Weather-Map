@@ -26,21 +26,21 @@ d3.csv("static/data/airports.csv").then (function(response) {
   // Loop through data
   for (var i = 0; i < response.length; i++) {
     markers = L.circleMarker([response[i].LATITUDE, response[i].LONGITUDE])
-    markers.bindPopup(response[i].AIRPORT);
-    L.geoJson(response, {
-      // We create a popup for each marker to display the magnitude and location of the earthquake after the marker has been created and styled
-      onEachFeature: function(feature, layer) {
-        layer.bindPopup(
-          "Magnitude: "
-            + feature.AIRPORT
+    markers.bindPopup(response[i].AIRPORT); //Add weather here
+    //  L.geoJson(response, {
+    //    // We create a popup for each marker to display the magnitude and location of the earthquake after the marker has been created and styled
+    //     onEachFeature: function(feature, layer) {
+    //     layer.bindPopup(
+    //       "Magnitude: "
+    //         + feature.AIRPORT
             
-        );
-      }
-    }).addTo(myMap);
+    //      );
+    //    }
+    // }).addTo(myMap);
     markers.on('mouseover', function(e) { 
       d3.csv("static/data/airports.csv").then (function(response){
         console.log(e)
-        var popup = L.popup()
+        var popup = L.popup(e)
       .setLatLng(e.latlng) 
       .setContent(e.layer)
       .openOn(myMap);
@@ -61,8 +61,6 @@ d3.csv("static/data/airports.csv").then (function(response) {
 
 
 
-// //draggable: true,
-// //
 // //.addTo(myMap)
 // // Initialize all of the LayerGroups we'll be using
 // var layers = {
