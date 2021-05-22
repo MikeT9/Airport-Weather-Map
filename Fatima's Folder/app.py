@@ -14,32 +14,6 @@ def home():
     return render_template("index.html")
 
 
-# @app.route("/currentweather", methods=["GET","POST"])
-# def currentweather():
-    
-#     # Save config information
-#     url = "https://api.openweathermap.org/data/2.5/weather?"
-#     units = "imperial"
-#     package = request.get_json()
-#     while package is None:
-#         app.logger.info("waiting for package")
-#         time.sleep(1)
-#     else:
-#         app.logger.info("recieved package")
-#         lat = float(package["latitude"])
-#         lon = float(package["longitude"])
-
-#     # Build query URL
-#     query_url = f"{url}lat={lat}&lon={lon}&units={units}&appid={wx_key}"
-
-#     # Get weather data
-#     curwx_response = requests.get(query_url)
-#     curwx_json = curwx_response.json()
-
-#     # Get the temperature from the response
-#     # print(json.dumps(weather_json, indent=4, sort_keys=True))
-#     return jsonify(curwx_json)
-
 @app.route("/currentweather/<lat>/<lon>")
 def currentweather(lat,lon):
     

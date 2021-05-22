@@ -110,16 +110,34 @@ function createMap(markers) {
   }).addTo(myMap);
 }
 
-// // Create our map, giving it the streetmap and earthquakes layers to display on load
-// var myMap = L.map("map", {
-//   center: [
-//     37.09, -95.71
-//   ],
-//   zoom: 4,
+function buildMetadata(e) {
+  // console.log(e)
 
-// });
+  // console.log(e.latlng)
 
-// streetmap.addTo(myMap);
+  //ajax request
+  $.ajax({
+    type: 'GET',
+    url: `/currentweather/${e.latlng.lat}/${e.latlng.lng}`,
+    dataType: "text",
+    success: function (data) {
+      //  on success build panels
+      console.log(data);
+      
+    }
+  });
+  $.ajax({
+    type: 'GET',
+    url: `/forecastweather/${e.latlng.lat}/${e.latlng.lng}`,
+    dataType: "text",
+    success: function (data) {
+      //  on success build panels
+      console.log(data);
+      
+    }
+  });
+    
+}
 
 d3.csv("static/data/airports.csv").then(function (response) {
   // Create a new marker cluster group
@@ -140,9 +158,7 @@ d3.csv("static/data/airports.csv").then(function (response) {
     //   });
     // });
 
-    marker.on('mouseout', function () {
-      marker.closePopup();
-    });
+    marker.on('click', buildMetadata);
 
     markers.push(marker)
 
