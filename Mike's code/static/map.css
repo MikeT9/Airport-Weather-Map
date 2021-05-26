@@ -1,13 +1,13 @@
-html, body {
+/* html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-}
-
+} */
+/* 
 #map {
 	width: 100%;
 	height: 100%;
-}
+} */
 
 .bold {
 	font-weight: bold;
@@ -19,4 +19,26 @@ html, body {
 	display: block;
 	position: relative;
 }
+body , html {
+	height: 100%;
+}
+body {
+	padding: 0%;
+	margin: 0;
+}
 
+#map {
+	min-height: 700px;
+	min-width: 100%;
+}
+.jumbotron {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #337ab7 ;
+}
+.container {
+	margin: 0%;
+	min-width: 100%;
+}

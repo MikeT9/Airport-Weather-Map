@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 0;
   margin: 0;
 }
@@ -8,9 +8,9 @@ body,
 html {
   /* padding: 5%;
   margin: 5%; */
-  height: 100%;
+  /* height: 100%; */
   /* width: 100%; */
-}
+/* } */ */
 
 .legend {
   padding: 10px;
@@ -27,7 +27,29 @@ html {
   margin-right: 8px;
   opacity: 0.7;
 }
+body , html {
+  height: 100%;
+}
+body {
+  padding: 0%;
+  margin: 0;
+}
 
+#map {
+  min-height: 700px;
+  min-width: 100%;
+}
+.jumbotron {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #337ab7 ;
+}
+.container {
+  margin: 0%;
+  min-width: 100%;
+}
               
 
 /* .Classic rain (mm) {
