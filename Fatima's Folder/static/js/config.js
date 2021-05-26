@@ -1,0 +1,2 @@
+API_KEY = "pk.eyJ1IjoibWlrZXQ5IiwiYSI6ImNrb2twNHUyODFyYWYyd3MzaXRuZjIxN3QifQ.vS9ymCRn80jf7v9LsAQq8g"
+wx_key = "2ebe5c322a838055b074c4ed70d7693b"
