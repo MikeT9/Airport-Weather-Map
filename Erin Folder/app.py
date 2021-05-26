@@ -10,3 +10,5 @@ from flask import Flask, jsonify
 
 import warnings
 warnings.filterwarnings('ignore')
+
+# set up database
