@@ -312,9 +312,8 @@ function initMap(markers) {
 	//	, "ESRI Aerial": esri
 	};
 
-	var overlayMaps = {
-		Airports: airportLayer,
-	};
+	var overlayMaps = {};
+	overlayMaps[getI18n('airports', localLang)] = airportLayer;
 	overlayMaps[getI18n('clouds', localLang)] = clouds;
 	overlayMaps[getI18n('cloudscls', localLang)] = cloudscls;
 	overlayMaps[getI18n('precipitation', localLang)] = precipitation;

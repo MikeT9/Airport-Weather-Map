@@ -18,6 +18,7 @@ function getI18n(key, lang) {
 			, layers: 'TileLayer'
 			, current: 'Current Weather'
 
+			, airports: 'International Airports'
 			, clouds: 'Clouds'
 			, cloudscls: 'Clouds (classic)'
 			, precipitation: 'Precipitation'
@@ -43,6 +44,7 @@ function getI18n(key, lang) {
 			, layers: 'Livelli Meteo'
 			, current: 'Meteo Corrente'
 
+			, airports: 'Aeroporti internazionali'
 			, clouds: 'Nuvole'
 			, cloudscls: 'Nuvole (classico)'
 			, precipitation: 'Precipitazioni'
@@ -68,6 +70,7 @@ function getI18n(key, lang) {
 			, layers: 'Ebenen'
 			, current: 'Aktuelles Wetter'
 
+			, airports: 'Internationale Flughäfen'
 			, clouds: 'Wolken'
 			, cloudscls: 'Wolken (classic)'
 			, precipitation: 'Niederschläge'
@@ -93,6 +96,7 @@ function getI18n(key, lang) {
 			, layers: 'Couches'
 			, current: 'Temps actuel'
 
+			, airports: 'Aéroports internationaux'
 			, clouds: 'Nuage'
 			, cloudscls: 'Nuage (classique)'
 			, precipitation: 'Précipitations'
@@ -118,6 +122,7 @@ function getI18n(key, lang) {
 			, layers: 'слой'
 			, current: 'текущая погода'
 
+			, airports: 'Международные аэропорты'
 			, clouds: 'о́блачность'
 			, cloudscls: 'о́блачность (класси́ческий)'
 			, precipitation: 'оса́дки'
@@ -143,6 +148,7 @@ function getI18n(key, lang) {
 			, layers: 'Lagen'
 			, current: 'Actuele Weer'
 
+			, airports: 'Internationale luchthavens'
 			, clouds: 'Wolken'
 			, cloudscls: 'Wolken (classic)'
 			, precipitation: 'Neerslag'
@@ -168,6 +174,7 @@ function getI18n(key, lang) {
 			, layers: 'Camadas'
 			, current: 'Meteorologia atual'
 
+			, airports: 'Aeroportos Internacionais'
 			, clouds: 'Núvens'
 			, cloudscls: 'Núvens (clássico)'
 			, precipitation: 'Precipitação'
@@ -193,6 +200,7 @@ function getI18n(key, lang) {
 			, layers: 'Láminas'
 			, current: 'Tiempo actual'
 
+			, airports: 'Aeroportos Internacionais'
 			, clouds: 'Nubes'
 			, cloudscls: 'Nubes (classic)'
 			, precipitation: 'Precipitaciones'
@@ -218,6 +226,7 @@ function getI18n(key, lang) {
 			, layers: 'Láminas'
 			, current: 'Tiempo actual'
 
+			, airports: 'Aeroportos Internacionais'
 			, clouds: 'Nubes'
 			, cloudscls: 'Nubes (classic)'
 			, precipitation: 'Precipitaciones'
@@ -243,6 +252,7 @@ function getI18n(key, lang) {
 			, layers: 'لایه ها'
 			, current: 'آب و هوای کنونی'
 
+			, airports: 'فرودگاه های بین المللی'
 			, clouds: 'ابر ها'
 			, cloudscls: 'ابر ها(کلاسیک)'
 			, precipitation: 'بارش'
