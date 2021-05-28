@@ -47,5 +47,5 @@ https://api.openweathermap.org/data/2.5/weather
   	- In order to make asynchronous server calls to fetch the weather data without stalling the map, we used the jQuery Ajax. 
  	 - The weather data for that airport populates in the panel to the left.
 
-7. We used BootStrap to set up our screen, using jumbotron features for the page header, a row to include the panel for the weather info and map that will stack on top of each other if opened in a small screen. Some CSS files were added to adjust the map and the application as well. 
+7. We used BootStrap to set up our screen, using jumbotron features for the page header, and a row to include the panel for the weather info and map, which will stack on top of each other if opened in a small screen. Some CSS files were added to adjust the map and the application as well. 
 
