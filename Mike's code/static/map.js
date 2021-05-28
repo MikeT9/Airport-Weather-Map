@@ -370,7 +370,7 @@ function buildMetadata(e) {
 	  dataType: "text",
 	  success: function (data) {
 		//  on success build panels
-		// console.log(data);
+		console.log(data);
 		var panelInfo = d3.select("#curr-wx");
     	// var metadata = rawData.metadata;
     	panelInfo.html("");
@@ -383,8 +383,10 @@ function buildMetadata(e) {
     	// });
 		var labels = {
 			"feels_like": "Feels Like",
+			"grnd_level": "Ground Level Pressure",
 			"humidity": "Humidity",
 			"pressure": "Pressure",
+			"sea_level": "Sea Level Pressure",
 			"temp": "Temperature",
 			"temp_max": "Max Temperature",
 			"temp_min": "Min Temperature"
@@ -392,8 +394,10 @@ function buildMetadata(e) {
 		
 		var units = {
 			"feels_like": "F",
+			"grnd_level": "mbar",
 			"humidity": "%",
 			"pressure": "mbar",
+			"sea_level": "mbar",
 			"temp": "F",
 			"temp_max": "F",
 			"temp_min": "F"
@@ -418,7 +422,7 @@ function buildMetadata(e) {
 }
 
 d3.csv("static/airports.csv").then(function (response) {
-	console.log(response)
+	// console.log(response)
 	// Create a new marker cluster group
 	var markers = [];
   

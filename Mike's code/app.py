@@ -9,6 +9,19 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
+# #################################################
+# # Database Setup
+# #################################################
+# engine = create_engine("sqlite:///project_2.db")
+
+# # reflect an existing database into a new model
+# Base = automap_base()
+# # reflect the tables
+# Base.prepare(engine, reflect=True)
+
+# # # Save reference to the table
+# Airports = Base.classes.airport_data
+
 app = Flask(__name__)
 
 wx_key = "2ebe5c322a838055b074c4ed70d7693b"
