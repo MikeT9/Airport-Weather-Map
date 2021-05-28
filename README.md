@@ -44,8 +44,8 @@ https://api.openweathermap.org/data/2.5/weather
 			` pressure: 'Pressure'` <br/>
 
 6.  As you click on airports on the map, the application will display the name of the airport in the map pop-up and fetch weather data for that airport. 
-  - In order to make asynchronous server calls to fetch the weather data without stalling the map, we used the jQuery Ajax. 
-  - The weather data for that airport populates in the panel to the right.
+  	- In order to make asynchronous server calls to fetch the weather data without stalling the map, we used the jQuery Ajax. 
+ 	 - The weather data for that airport populates in the panel to the right.
 
 7. We used BootStrap to set up our screen, using jumbotron features for the page header, a row to include the panel for the weather info and map that will stack on top of each other if opened in a small screen. 
 
