@@ -247,7 +247,7 @@ function initMap(markers) {
 
 	// Get your own free OWM API key at https://www.openweathermap.org/appid - please do not re-use mine!
 	// You don't need an API key for this to work at the moment, but this will change eventually.
-	var OWM_API_KEY = '2ebe5c322a838055b074c4ed70d7693b';
+	var OWM_API_KEY = wx_key;
 
 	var clouds = L.OWM.clouds({opacity: 0.8, legendImagePath: 'static/NT2.png', appId: OWM_API_KEY});
 	var cloudscls = L.OWM.cloudsClassic({opacity: 0.5, appId: OWM_API_KEY});
@@ -421,14 +421,14 @@ function buildMetadata(e) {
 	  
 }
 
-d3.csv("static/airports.csv").then(function (response) {
+d3.json("/data").then(function (response) {
 	// console.log(response)
 	// Create a new marker cluster group
 	var markers = [];
   
 	// Loop through data
 	for (var i = 0; i < response.length; i++) {
-	  marker = L.circleMarker([response[i].LATITUDE, response[i].LONGITUDE])
+	  marker = L.marker([response[i].LATITUDE, response[i].LONGITUDE])
 	  marker.bindPopup(response[i].AIRPORT); 
 
   

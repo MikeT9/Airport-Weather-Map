@@ -5,26 +5,23 @@ import json
 import time
 import numpy as np
 import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
+import os.path
+import pandas as pd
+from config import wx_key
 
-# #################################################
-# # Database Setup
-# #################################################
-# engine = create_engine("sqlite:///project_2.db")
 
-# # reflect an existing database into a new model
-# Base = automap_base()
-# # reflect the tables
-# Base.prepare(engine, reflect=True)
+if not os.path.exists("data.db"):
+    engine=sqlalchemy.create_engine('sqlite:///data.db')
+    df=pd.read_csv("static/airports.csv")
+    df.to_sql("airports",index=False,con=engine)
 
-# # # Save reference to the table
-# Airports = Base.classes.airport_data
+else:
+    engine=sqlalchemy.create_engine('sqlite:///data.db')
+
+
+
 
 app = Flask(__name__)
-
-wx_key = "2ebe5c322a838055b074c4ed70d7693b"
 
 
 @app.route("/")
@@ -70,6 +67,26 @@ def forecastweather(lat,lon):
     # Get the temperature from the response
     # print(json.dumps(weather_json, indent=4, sort_keys=True))
     return jsonify(forwx_json)
+
+@app.route("/data")
+def jsonified():
+    rows=engine.execute("SELECT IATA,AIRPORT,CITY,STATE,COUNTRY,LATITUDE,LONGITUDE FROM airports")
+
+    res=[]
+    for row in rows:
+        print(row)
+        x={"IATA":row[0],
+            "AIRPORT":row[1],
+            "CITY":row[2],
+            "STATE":row[3],
+            "COUNTRY":row[4],
+            "LATITUDE":row[5],
+            "LONGITUDE":row[6]
+        } 
+        res.append(x)
+
+    
+    return jsonify(res)
 
 if __name__ == "__main__":
     app.run(debug=True)
