@@ -375,7 +375,7 @@ function buildMetadata(e) {
     	// var metadata = rawData.metadata;
     	panelInfo.html("");
 		var wx = JSON.parse(data);
-		console.log(wx);
+		// console.log(wx);
     	// metaId = metadata.filter(mdata => mdata.id == id)[0];
     	// console.log(metaId);
     	// Object.entries(wx.main).forEach(([key, value]) => {
@@ -418,6 +418,7 @@ function buildMetadata(e) {
 }
 
 d3.csv("static/airports.csv").then(function (response) {
+	console.log(response)
 	// Create a new marker cluster group
 	var markers = [];
   
