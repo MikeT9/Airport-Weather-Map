@@ -370,8 +370,38 @@ function buildMetadata(e) {
 	  dataType: "text",
 	  success: function (data) {
 		//  on success build panels
-		console.log(data);
+		// console.log(data);
+		var panelInfo = d3.select("#curr-wx");
+    	// var metadata = rawData.metadata;
+    	panelInfo.html("");
+		var wx = JSON.parse(data);
+		console.log(wx);
+    	// metaId = metadata.filter(mdata => mdata.id == id)[0];
+    	// console.log(metaId);
+    	// Object.entries(wx.main).forEach(([key, value]) => {
+        // 	panelInfo.append("h4").text(`${key}: ${value}`);
+    	// });
+		var labels = {
+			"feels_like": "Feels Like",
+			"humidity": "Humidity",
+			"pressure": "Pressure",
+			"temp": "Temperature",
+			"temp_max": "Max Temperature",
+			"temp_min": "Min Temperature"
+		}
 		
+		var units = {
+			"feels_like": "F",
+			"humidity": "%",
+			"pressure": "mbar",
+			"temp": "F",
+			"temp_max": "F",
+			"temp_min": "F"
+		}
+
+		Object.entries(wx.main).forEach(([key, value]) => {
+        	panelInfo.append("h4").text(`${labels[key]}: ${value} ${units[key]}`);
+    	});		
 	  }
 	});
 	$.ajax({
@@ -380,7 +410,7 @@ function buildMetadata(e) {
 	  dataType: "text",
 	  success: function (data) {
 		//  on success build panels
-		console.log(data);
+		// console.log(data);
 		
 	  }
 	});
